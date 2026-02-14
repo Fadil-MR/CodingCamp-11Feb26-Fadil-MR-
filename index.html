@@ -1,68 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Company Profile</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Fadil</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
+    <!-- Header Content -->
+    <header class="flex justify-between items-center p-4">
+        <!-- Logo -->
+        <div class="logo"></div>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">MyCompany</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#profile">Our Profile</a></li>
-      <li><a href="#contact">Message Us</a></li>
-    </ul>
-  </nav>
+        <img src="LOGO SMKN 26.jpeg" alt="10x10" class="w-20 h-20 rounded-full"/>
 
-  <!-- Home -->
-  <section id="home" class="banner">
-    <h1 id="welcome-text">Hi, Welcome to Website</h1>
-    <p>We build simple and meaningful digital solutions.</p>
-  </section>
+        <!-- Navigation Menu -->
+        <nav class="flex">
+            <a class="border rounded p-2" href="#home-page">HOME</a>
+            <a class="border rounded p-2" href="#our-profile-page">PROFILE</a>
+            <a class="border rounded p-2" href="#portfolio-page">PORTOFOLIO</a>
+            <a class="border rounded p-2" href="#message-us-page">MESSAGE US</a>
+        </nav>
+    </header>
 
-  <!-- Our Profile -->
-  <section id="profile">
-    <h2>About the Company</h2>
-    <p>
-      MyCompany is a technology-driven company focused on creating
-      efficient, user-friendly, and modern web solutions.
-    </p>
+    <hr />
 
-    <h3>Vision</h3>
-    <p>To become a trusted digital solution partner.</p>
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <section id="home-page" class="min-h-[500px] text-center content-center">
+            <h2 class="text-xl font-bold" id="welcome-speech">Welcome to Our Website</h2>
+            <p class="mt-2">We are glad to have you here. Explore our services and offerings.</p>
+        </section>
 
-    <h3>Mission</h3>
-    <ul>
-      <li>Deliver high-quality products</li>
-      <li>Focus on user experience</li>
-      <li>Continuous innovation</li>
-    </ul>
-  </section>
+        <hr />
 
-  <!-- Message Us -->
-  <section id="contact">
-    <h2>Message Us</h2>
+        <!-- Our Profile Page -->
+        <section id="our-profile-page" class="min-h-[500px] text-center content-center">
+            <h2 class="text-xl font-bold">About Fadil Muhammad Rizky</h2>
+            <p class="mt-2">Fadil Muhammad Rizky is a dedicated student at SMKN 26, passionate about technology and innovation.</p>
+        </section>
 
-    <form id="contactForm">
-      <label>Name</label>
-      <input type="text" id="name">
+        <hr />
 
-      <label>Email</label>
-      <input type="email" id="email">
+        <!-- Portfolio Page -->
+        <section id="portfolio-page" class="min-h-[500px] text-center content-center">
+            <h2 class="text-xl font-bold">Our Portfolio</h2>
+            <p class="mt-2">Take a look at our diverse range of projects that showcase our skills and expertise.</p>
+        </section>
 
-      <label>Phone Number</label>
-      <input type="text" id="phone">
+        <hr />
 
-      <label>Message</label>
-      <textarea id="message"></textarea>
+        <!-- Message Us Page -->
+        <section id="message-us-page" class="min-h-[500px] mx-8">
+            <header>
+                <h2 class="text-xl font-bold">Message Us</h2>
+                <p class="mt-2">Have questions or want to work with us? Send us a message and we'll get back to you
+                    promptly.</p>
+            </header>
 
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+            <form>
+                <div class="mb-4">
+                    <label class="block mb-2" for="name">Name:</label>
+                    <input class="w-full p-2 border rounded" type="text" id="name" name="name" required />
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2" for="email">Email:</label>
+                    <input class="w-full p-2 border rounded" type="email" id="email" name="email" required />
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2" for="message">Message:</label>
+                    <textarea class="w-full p-2 border rounded" id="message" name="message" rows="5"
+                        required></textarea>
+                </div>
+                <button class="px-4 py-2 bg-blue-500 text-white rounded" type="button">Send Message</button>
+            </form>
+        </section>
+    </main>
 
-  <script src="js/script.js"></script>
+    <!-- Footer Content -->
+    <footer>
+        <hr />
+        <p class="text-center p-4">© 2026 Fadil - Software Engineer. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript External -->
+    <script src="js/script.js"></script>
 </body>
+
 </html>
