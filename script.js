@@ -1,24 +1,18 @@
-// Welcome text
-let userName = prompt("Please enter your name:");
-if (userName) {
-  document.getElementById("welcome-text").innerText =
-    "Hi " + userName + ", Welcome to Website";
+welcomeMessage();
+
+// Welcome Message Function
+function welcomeMessage() {
+    // Show Popup
+    let name = prompt("Welcome to Yama Company! What is your name?");
+
+    // validate input
+    if (name == null || name.trim() === "") {
+        // If user cancels or enters an empty name, use "Guest" as default
+        name = "Guest";
+    }
+
+    // Display Welcome Message
+    document.getElementById('welcome-speech').innerHTML = `Hello, ${name}! Welcome to Yama Company.`;
 }
 
-// Form validation
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let phone = document.getElementById("phone").value;
-  let message = document.getElementById("message").value;
-
-  if (!name || !email || !phone || !message) {
-    alert("Please fill in all fields!");
-    return;
-  }
-
-  alert("Thank you, " + name + "! Your message has been sent.");
-  this.reset();
-});
+function validateForm() { }
